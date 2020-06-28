@@ -1,0 +1,4 @@
+databaseChangeLog:
+- include:
+  - file: "v0.1.0_1_create_device_table.yaml"
+  - relativeToChangelogFile: true
