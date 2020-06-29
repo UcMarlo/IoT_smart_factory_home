@@ -2,5 +2,5 @@ package com.co.smart.domain.measurement;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface DeviceMeasurementRepository extends JpaRepository<DeviceMeasurement, Long> {
+public interface MeasurementRepository extends JpaRepository<Measurement, Long> {
 }
