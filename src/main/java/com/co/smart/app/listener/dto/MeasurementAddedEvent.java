@@ -1,13 +1,16 @@
 package com.co.smart.app.listener.dto;
 
-import lombok.Value;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
-@Value
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@Getter
+@ToString
 public class MeasurementAddedEvent {
-    String deviceName;
+    String metricName;
     BigDecimal value;
     OffsetDateTime timestamp;
 }

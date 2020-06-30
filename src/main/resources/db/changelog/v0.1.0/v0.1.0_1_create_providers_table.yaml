@@ -8,16 +8,16 @@ databaseChangeLog:
             tableName: metrics_providers
             columns:
               - column:
-                name:id
-                type: int unsiged
-                autoIncrement: true
-                constraints:
-                  primaryKey: true
-                  nullable: false
+                  name: id
+                  type: int unsiged
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
               - column:
                   name: name
                   type: varchar(30)
         - addUniqueConstraint:
-            columnNames:  name
-            constraintName:  prov_name_const
-            tableName:  devices
+            columnNames: name
+            constraintName: prov_name_const
+            tableName: metrics_providers

@@ -4,7 +4,7 @@ services:
 
   postgres:
     container_name: postgres_main_db
-    image: postgres
+    image: postgres:10.13-alpine
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: secret

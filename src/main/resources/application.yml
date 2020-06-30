@@ -15,3 +15,5 @@ spring:
         temp.use_jdbc_metadata_defaults: false
         jdbc.lob.non_contextual_creation: true
         namingStragegy: org.hibernate.cfg.ImprovedNamingStrategy
+queues:
+  measurementAdded: "devices.measurement_added.event.smart_dashboard"

@@ -1,45 +1,42 @@
 databaseChangeLog:
 - changeSet:
-    id: 0.1.0_1
+    id: 0.1.0_2
     author: marlo
     comment: "measurements table initialization"
     changes:
-    - createTable:
-        tableName: measurements
-        columns:
-        - column:
-          name: id
-          type: int unsiged
-          autoIncrement: true
-          constraints:
-            primaryKey: true
-            nullable: false
-        - column:
-          name: metric_id
-          type: int unsiged
-          autoIncrement: true
-          constraints:
-            nullable: false
-            foreignKeyName: fk_measurement_metric_id
-            references: metrics_providers(id)
-        - column:
-          name: value
-          type: double
-          autoIncrement: true
-          constraints:
-            primaryKey: true
-            nullable: false
-        - column:
-          name: timestamp
-          type: datetime(6)
-          constraints:
-            nullable: false
-    - createIndex:
-        columns:
+      - createTable:
+          tableName: measurements
+          columns:
           - column:
               name: id
+              type: int unsiged
+              autoIncrement: true
+              constraints:
+                primaryKey: true
+                nullable: false
           - column:
               name: metric_id
+              type: int unsiged
+              autoIncrement: true
+              constraints:
+                nullable: false
+                foreignKeyName: fk_measurement_metric_id
+                references: metrics_providers(id)
+          - column:
+              name: value
+              type: double
           - column:
               name: timestamp
-        indexName: measurement_met_id_time
+              type: datetime(6)
+              constraints:
+                nullable: false
+      - createIndex:
+          columns:
+            - column:
+                name: id
+            - column:
+                name: metric_id
+            - column:
+                name: timestamp
+          indexName: measurement_met_id_time
+          tableName: measurements
