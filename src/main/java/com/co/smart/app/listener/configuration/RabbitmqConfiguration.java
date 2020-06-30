@@ -16,7 +16,6 @@ public class RabbitmqConfiguration {
     public Jackson2JsonMessageConverter jackson2JsonMessageConverter(){
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
-        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         objectMapper.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE);
         objectMapper.configure(DeserializationFeature.ADJUST_DATES_TO_CONTEXT_TIME_ZONE, false);
         objectMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
