@@ -28,7 +28,7 @@ public class MeasurementService {
 
     private void createNewMeasurement(Integer providerId, OffsetDateTime timestamp, BigDecimal value){
         measurementRepository.save(
-                new Measurement(providerId, value, timestamp.toLocalDate())
+                new Measurement(providerId, value, timestamp.toLocalDateTime())
         );
     }
 

@@ -33,10 +33,9 @@ databaseChangeLog:
       - createIndex:
           columns:
             - column:
-                name: id
-            - column:
                 name: metric_id
             - column:
                 name: timestamp
           indexName: measurement_met_id_time
           tableName: measurements
+          unique: true

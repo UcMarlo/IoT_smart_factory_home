@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name= "measurements")
@@ -26,9 +27,9 @@ public class Measurement {
     private BigDecimal value;
 
     @NotNull
-    private LocalDate timestamp;
+    private LocalDateTime timestamp;
 
-    public Measurement(Integer metricId, BigDecimal value, LocalDate timestamp) {
+    public Measurement(Integer metricId, BigDecimal value, LocalDateTime timestamp) {
         this.metricId = metricId;
         this.value = value;
         this.timestamp = timestamp;
