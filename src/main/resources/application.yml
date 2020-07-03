@@ -28,3 +28,7 @@ spring:
 
 queues:
   measurementAdded: "devices.measurement_added.event.smart_dashboard"
+
+queueName: "devices.message"
+exchangeName: "devices"
+routingKey: "devices.message"
