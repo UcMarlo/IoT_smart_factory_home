@@ -1,0 +1,7 @@
+databaseChangeLog:
+- include:
+  - file: "v0.1.0_1_create_providers_table.yaml"
+  - relativeToChangelogFile: true
+- include:
+  - file: "v0.1.0_2_create_measurements_table.yaml"
+  - relativeToChangelogFile: true

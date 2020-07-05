@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: development
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/smart
+    username: user
+    password: secret
+  jpa:
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        temp.use_jdbc_metadata_defaults: false
+        jdbc.lob.non_contextual_creation: true
+        namingStragegy: org.hibernate.cfg.ImprovedNamingStrategy
+
+  rabbitmq:
+    listener:
+      simple:
+        retry:
+          enabled: true
+          initial-interval: 500
+          max-attempts: 3
+          max-interval: 2000
+          multiplier: 2
+messageBroker:
+  queues:
+    measurementAdded:
+      routingKey: "devices.measurement_added.event"
+      queue: "devices.measurement_added.event.smart_dashboard"
+      exchangeName: "devices"
