@@ -2,6 +2,7 @@ package com.co.smart.app.listener.dto;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
@@ -9,7 +10,7 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 @ToString
-public class MeasurementAddedEvent {
+public class MeasurementAddedEvent  implements Serializable {
     String metricName;
     BigDecimal value;
     OffsetDateTime timestamp;

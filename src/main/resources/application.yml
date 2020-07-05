@@ -25,10 +25,9 @@ spring:
           max-attempts: 3
           max-interval: 2000
           multiplier: 2
-
-queues:
-  measurementAdded: "devices.measurement_added.event.smart_dashboard"
-
-queueName: "devices.message"
-exchangeName: "devices"
-routingKey: "devices.message"
+messageBroker:
+  queues:
+    measurementAdded:
+      routingKey: "devices.measurement_added.event"
+      queue: "devices.measurement_added.event.smart_dashboard"
+      exchangeName: "devices"

@@ -14,8 +14,7 @@ public class MeasurementAddedListener {
 
     private final MeasurementService measurementService;
 
-
-    @RabbitListener(queues = {"${queues.measurementAdded}"})
+    @RabbitListener(queues = {"${messageBroker.queues.measurementAdded.queue}"})
     public void measurementAddedEventHandler(MeasurementAddedEvent event){
         log.info("Received event: {}", event);
 
