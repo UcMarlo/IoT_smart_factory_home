@@ -15,7 +15,7 @@
 	<description>Smart home/factory dashboard</description>
 
 	<properties>
-		<java.version>12</java.version>
+		<java.version>11</java.version>
 		<image.skip>true</image.skip>
 	</properties>
 

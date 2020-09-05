@@ -22,3 +22,11 @@ services:
     ports:
     - 5672:5672
     - 15672:15672
+
+  smart:
+    image: smart:0.0.1-SNAPSHOT
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+      - rabbitmq
